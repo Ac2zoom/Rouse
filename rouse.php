@@ -35,15 +35,20 @@ function login($email, $password_hash) {
 // Add time to call for next day
 function addTime($email, $time) {
     $query = array("email" => $email);
-    $update = array("matches." . )
+    $update = array("$set" => array("matches." . date("m-d-y") => array('time' => $time)));
+    $GLOBALS['collection']->update($query, $update);
 }
 
 // Change passion
-function changePassion() {
-
+function changePassion($email, $new_passion) {
+    $query = array("email" => $email);
+    $update = array("$set" => array("passion" => $new_passion));
+    $GLOBALS['collection']->update($query, $update);
 }
 
 // Change goal
-function changeGoal() {
-
+function changeGoal($email, $new_goal) {
+    $query = array("email" => $email);
+    $update = array("$set" => array("goal" => $new_goal));
+    $GLOBALS['collection']->update($query, $update);
 }
