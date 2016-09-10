@@ -33,8 +33,9 @@ function login($email, $password_hash) {
 }
 
 // Add time to call for next day
-function addTime() {
-
+function addTime($email, $time) {
+    $query = array("email" => $email);
+    $update = array("matches." . )
 }
 
 // Change passion
