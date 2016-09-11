@@ -31,11 +31,10 @@ if(isset($_POST['add'])) {
 	} else {
 		$db = $m->rouse;
         $collection = $db->users;
-        $ret = register($collection, $_POST['email'], hash("sha256", $_POST['password']));
+		$email = $_POST['email'];
+        $ret = login($collection, $email, hash("sha256", $_POST['password']));
         if (strcmp($ret, "Incorrect Password") !== 0) {
-            header("Location: http://localhost:8000/main_page.php?first_name=" . $first_name .
-			"&phonenumber=" . $phone . "&personalgoals=" . $personalgoals . "&interests=" .
-			$interests);
+            header("Location: http://localhost:8000/main_page.php?email=" . $email);
         } else {
             echo $ret;
         }
