@@ -17,7 +17,23 @@ if(isset($_POST['add'])) {
                  hash("sha256", $_POST['password']), $phone, $interests,
                  $personalgoals);
         if (strcmp($ret, "Success") === 0) {
-            header("Location: http://localhost:8000/main.php?first_name=" . $first_name .
+            header("Location: http://localhost:8000/main_page.php?first_name=" . $first_name .
+			"&phonenumber=" . $phone . "&personalgoals=" . $personalgoals . "&interests=" .
+			$interests);
+        } else {
+            echo $ret;
+        }
+	}
+} else if(isset($_POST['login'])) {
+	$m = new MongoClient("mongodb://main:rouse@ds029456.mlab.com:29456/rouse");
+	if (!$m) {
+		echo "Could not connect to MongoDB";
+	} else {
+		$db = $m->rouse;
+        $collection = $db->users;
+        $ret = register($collection, $_POST['email'], hash("sha256", $_POST['password']));
+        if (strcmp($ret, "Incorrect Password") !== 0) {
+            header("Location: http://localhost:8000/main_page.php?first_name=" . $first_name .
 			"&phonenumber=" . $phone . "&personalgoals=" . $personalgoals . "&interests=" .
 			$interests);
         } else {
@@ -61,7 +77,7 @@ if(isset($_POST['add'])) {
 				<div class="tab-content">
 					<div class="tab-pane" id="tab3">
 						<div class="contact-form">
-							<form ng-submit="addOffer()" method="post" action="<?php $_PHP_SELF ?>">
+							<form method="post" action="<?php $_PHP_SELF ?>">
 								<div class="row">
 									<div class="col-md-5">
 										<br> <br>
@@ -93,16 +109,18 @@ if(isset($_POST['add'])) {
 
 					<div class="tab-pane active in" id="tab1">
 						<div class="contact-form">
-							<div class="row">
-								<div class="col-md-5">
-									<br> <br>
-									<input type="text" input name="name1" class="form-control" placeholder="User Login" ng-model="last" id="name1" />
-									<br>
-									<input type="password" input name="name2" class="form-control" placeholder="Password" ng-model="last2" id="name2" />
-									<br>
-									<button type="submit" name="add" class="btn btn-primary" id="add" value = "submit" ng-click="submit">Login</button>
+							<form method="post" action="<?php $_PHP_SELF ?>">
+								<div class="row">
+									<div class="col-md-5">
+										<br> <br>
+										<input type="text" input name="name1" class="form-control" placeholder="User Login" ng-model="last" id="name1" />
+										<br>
+										<input type="password" input name="name2" class="form-control" placeholder="Password" ng-model="last2" id="name2" />
+										<br>
+										<button type="submit" name="add" class="btn btn-primary" id="login" value = "submit" ng-click="submit">Login</button>
+									</div>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
