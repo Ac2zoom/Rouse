@@ -31,8 +31,8 @@ if(isset($_POST['add'])) {
 	} else {
 		$db = $m->rouse;
         $collection = $db->users;
-		$email = $_POST['email'];
-        $ret = login($collection, $email, hash("sha256", $_POST['password']));
+		$email = $_POST['name1'];
+        $ret = login($collection, $email, hash("sha256", $_POST['name2']));
         if (strcmp($ret, "Incorrect Password") !== 0) {
             header("Location: " . parse_url($_SERVER['REQUEST_URI'])["host"] . "/main_page.php?email=" . $email);
         } else {
