@@ -116,7 +116,7 @@ if(isset($_POST['add'])) {
 										<br>
 										<input type="password" input name="name2" class="form-control" placeholder="Password" ng-model="last2" id="name2" />
 										<br>
-										<button type="submit" name="add" class="btn btn-primary" id="login" value = "submit" ng-click="submit">Login</button>
+										<button type="submit" name="login" class="btn btn-primary" id="login" value = "submit" ng-click="submit">Login</button>
 									</div>
 								</div>
 							</form>
