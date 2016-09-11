@@ -20,10 +20,12 @@ function register($collection, $first_name, $last_name, $email, $password_hash, 
 function login($collection, $email, $password_hash) {
     $a = array("email" => $email, "password_hash" => $password_hash);
     $cursor = $collection->find($a);
-    if (count($cursor) === 0) {
+    if ($cursor->count() === 0) {
         return "Incorrect Password";
     } else {
-        return $cursor[0];
+        foreach ($cursor as $doc) {
+            return $doc;
+        }
     }
 }
 

@@ -99,7 +99,7 @@ if(isset($_POST['add'])) {
 										<br>
 										<input type = "text" input name="personalgoals" class = "form-control" placeholder="What are some of your goals?" ng-model="last" id="personalgoals" />
 										<br>
-										<button type="submit" name="add" class="btn btn-primary" id="add" value = "submit" ng-click="submit">Login</button>
+										<button type="submit" name="add" class="btn btn-primary" id="add" value = "submit" ng-click="submit">Register</button>
 									</div>
 								</div>
 							</form>
