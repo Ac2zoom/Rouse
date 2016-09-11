@@ -11,7 +11,9 @@ if(isset($_POST['add'])) {
         $collection = $db->users;
 		$first_name = $_POST['firstname'];
 		$phone = $_POST['phonenumber'];
-		$personalgoals = $_POST['personalgoals'];
+        if (isset($_POST['personalgoals'])) {
+            $personalgoals = $_POST['personalgoals'];
+        }
 		$interests = $_POST['expl'];
         $ret = register($collection, $first_name, $_POST['lastname'], $_POST['email'],
                  hash("sha256", $_POST['password']), $phone, $interests,
@@ -92,15 +94,16 @@ if(isset($_POST['add'])) {
 										<input type="password" input name="password" class="form-control" placeholder="Password" ng-model="last" id="password" />
 										<br>
 										<input type = "text" input name="phonenumber" class = "form-control" placeholder="Your cell" ng-model="last" id="phonenumber"/>
-										<br>
-										<input type="checkbox" checked data-toggle="toggle" data-on="PTL 30" data-off="PTL 20" id="view-toggle">
+                                        <br>
 										<select class="form-control" input name="expl" id="expl" >
 											<option type="text" class="form-control" placeholder="None" ng-model="none" /> Select from the following </option>
 											<option type="text" class="form-control" placeholder="Programming" ng-model="none" /> Programming </option>
 											<option type="text" class="form-control" placeholder="Music" ng-model="none" /> Music </option>
 											<option type="text" class="form-control" placeholder="Sports" ng-model="none" /> Sports </option>
 										</select>
-										<br>
+                                        <br>
+                                        <input type="checkbox" input name="user_type" class="form-control" checked data-toggle="toggle" data-on="Receiver" data-off="Caller" id="type-toggle">
+                                        <br> <br>
 										<input type = "text" input name="personalgoals" class = "form-control" placeholder="What are some of your goals?" ng-model="last" id="personalgoals" />
 										<br>
 										<button type="submit" name="add" class="btn btn-primary" id="add" value = "submit" ng-click="submit">Register</button>
@@ -142,5 +145,14 @@ if(isset($_POST['add'])) {
         <script src="startbootstrap-new-age/js/new-age.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
         <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+            <script>
+                $('#view-toggle').change(function() {
+                    if ($(this).prop('checked')) {
+                        $('#personalgoals').toggle();
+                    } else {
+                        $('#personalgoals').toggle();
+                    }
+                })
+            </script>
     </body>
 </html>

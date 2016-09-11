@@ -49,3 +49,24 @@ function changeGoal($collection, $email, $new_goal) {
     $update = array("$set" => array("goal" => $new_goal));
     $collection->update($query, $update);
 }
+
+function findMatch($collection, $email, $usertype, $time) {
+    // Look for existing matches
+    $query = array("email"=>$email, "matches." . date("m-d-y") . ".match" => array("$exists" => true));
+    $cursor = $collection->find($query);
+    if ($cursor->count() > 0) {
+        foreach ($cursor as $doc) {
+            return $doc;
+        }
+    }
+    // Otherwise, query database based on usertype
+    $query = array("matches." . date("m-d-y") . ".time" => $time);
+    // If user is a receiver, only look for callers
+    if (strcmp($usertype, "receiver") === 0) {
+        $query['goals'] = "";
+    }
+    $cursor = $collection->find($query);
+    foreach ($cursor as $doc) {
+        return $doc;
+    }
+}
