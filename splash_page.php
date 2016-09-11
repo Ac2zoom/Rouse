@@ -17,7 +17,7 @@ if(isset($_POST['add'])) {
                  hash("sha256", $_POST['password']), $phone, $interests,
                  $personalgoals);
         if (strcmp($ret, "Success") === 0) {
-            header("Location: " . $_SERVER['REQUEST_URI'] . "/main_page.php?first_name=" . $first_name .
+            header("Location: " . parse_url($_SERVER['REQUEST_URI'])["host"] . "/main_page.php?first_name=" . $first_name .
 			"&phonenumber=" . $phone . "&personalgoals=" . $personalgoals . "&interests=" .
 			$interests);
         } else {
@@ -34,7 +34,7 @@ if(isset($_POST['add'])) {
 		$email = $_POST['email'];
         $ret = login($collection, $email, hash("sha256", $_POST['password']));
         if (strcmp($ret, "Incorrect Password") !== 0) {
-            header("Location: " . $_SERVER['REQUEST_URI'] . "/main_page.php?email=" . $email);
+            header("Location: " . parse_url($_SERVER['REQUEST_URI'])["host"] . "/main_page.php?email=" . $email);
         } else {
             echo $ret;
         }
