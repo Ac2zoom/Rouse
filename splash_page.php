@@ -34,7 +34,10 @@ if(isset($_POST['add'])) {
 		$email = $_POST['name1'];
         $ret = login($collection, $email, hash("sha256", $_POST['name2']));
         if (gettype($ret) !== 'string') {
-            header("Location: " . parse_url($_SERVER['REQUEST_URI'])["host"] . "/main_page.php?email=" . $email);
+            header("Location: " . parse_url($_SERVER['REQUEST_URI'])["host"] .
+                   "/main_page.php?email=" . $email . "&first_name=" . $ret['first_name'] .
+                   "&phonenumber=" . $ret['phone'] . "&personalgoals=" . $ret['goals'] . "&interests=" .
+                   $ret['interests']);
         }
 	}
 }

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deafbc87-862d-4ad5-add1-77fc93c98f43" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_page.php" afterPath="$PROJECT_DIR$/main_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splash_page.php" afterPath="$PROJECT_DIR$/splash_page.php" />
     </list>
     <ignored path="Rouse.iws" />
@@ -23,13 +25,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="splash_page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="splash_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/splash_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+            <state relative-caret-position="459">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1473579027377" expanded="true" signature="1731:1815" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="1731:6295" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="1739:1815" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="2746:6287" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="2787:6280" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="2838:2866" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="2867:2898" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="2930:5780" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="2960:3156" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="3186:5770" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="3224:5060" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="3257:5048" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="3314:5035" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="3340:5020" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="3372:5005" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="4186:4668" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="5109:5759" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="5142:5747" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="5199:5734" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="5225:5719" ph="..." />
+                <marker date="1473579027377" expanded="true" signature="5257:5704" ph="..." />
               </folding>
             </state>
           </provider>
@@ -40,9 +62,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding>
-                <marker date="1473576253435" expanded="true" signature="162:638" ph="..." />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_page.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main_page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,6 +97,7 @@
       <list>
         <option value="$PROJECT_DIR$/rouse.php" />
         <option value="$PROJECT_DIR$/splash_page.php" />
+        <option value="$PROJECT_DIR$/main_page.php" />
       </list>
     </option>
   </component>
@@ -256,7 +287,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1473562933069</updated>
-      <workItem from="1473562934252" duration="5766000" />
+      <workItem from="1473562934252" duration="6914000" />
     </task>
     <task id="LOCAL-00001" summary="Added references to startbootstrap-new-age theme files">
       <created>1473564811634</created>
@@ -272,17 +303,38 @@
       <option name="project" value="LOCAL" />
       <updated>1473567762950</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FIX">
+      <created>1473578248968</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1473578248968</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removed echo array&#10;">
+      <created>1473578382510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1473578382510</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Accidentally flipped comparison">
+      <created>1473578478073</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1473578478073</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5766000" />
+    <option name="totallyTimeSpent" value="6914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19029851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -316,7 +368,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added references to startbootstrap-new-age theme files" />
     <MESSAGE value="Enabled account creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enabled account creation" />
+    <MESSAGE value="FIX" />
+    <MESSAGE value="Removed echo array&#10;" />
+    <MESSAGE value="Accidentally flipped comparison" />
+    <option name="LAST_COMMIT_MESSAGE" value="Accidentally flipped comparison" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -331,12 +386,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rouse.php">
+    <entry file="file://$PROJECT_DIR$/splash_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="459">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
-            <marker date="1473576253435" expanded="true" signature="162:638" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="1731:1815" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="1731:6295" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="1739:1815" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="2746:6287" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="2787:6280" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="2838:2866" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="2867:2898" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="2930:5780" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="2960:3156" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="3186:5770" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="3224:5060" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="3257:5048" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="3314:5035" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="3340:5020" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="3372:5005" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="4186:4668" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="5109:5759" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="5142:5747" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="5199:5734" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="5225:5719" ph="..." />
+            <marker date="1473579027377" expanded="true" signature="5257:5704" ph="..." />
           </folding>
         </state>
       </provider>
@@ -349,13 +424,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/splash_page.php">
+    <entry file="file://$PROJECT_DIR$/rouse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
