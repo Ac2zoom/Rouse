@@ -16,10 +16,22 @@ if(isset($_POST['add'])) {
 <html>
 	<head>
 		<title> Rouse </title>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core CSS -->
+		<link href="startbootstrap-new-age/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="startbootstrap-new-age/vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="startbootstrap-new-age/vendor/simple-line-icons/css/simple-line-icons.css">
+        <link rel="stylesheet" href="startbootstrap-new-age/vendor/device-mockups/device-mockups.min.css">
+
+        <!-- Theme CSS -->
+        <link href="startbootstrap-new-age/css/new-age.min.css" rel="stylesheet">
 	</head>
 	<body ng-app="pennapps" ng-controller="MainCtrl">
 		<div class="col-md-6 col-md-offset-3">
@@ -80,5 +92,17 @@ if(isset($_POST['add'])) {
 					</div>
 				</div>
 			</div>
+
+        <!-- jQuery -->
+        <script src="startbootstrap-new-age/vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="startbootstrap-new-age/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <!-- Theme JavaScript -->
+        <script src="startbootstrap-new-age/js/new-age.min.js"></script>
 	</body>
 </html>
