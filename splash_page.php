@@ -93,6 +93,7 @@ if(isset($_POST['add'])) {
 										<br>
 										<input type = "text" input name="phonenumber" class = "form-control" placeholder="Your cell" ng-model="last" id="phonenumber"/>
 										<br>
+										<input type="checkbox" checked data-toggle="toggle" data-on="PTL 30" data-off="PTL 20" id="view-toggle">
 										<select class="form-control" input name="expl" id="expl" >
 											<option type="text" class="form-control" placeholder="None" ng-model="none" /> Select from the following </option>
 											<option type="text" class="form-control" placeholder="Programming" ng-model="none" /> Programming </option>
