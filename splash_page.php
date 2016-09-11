@@ -1,6 +1,6 @@
 <?php
 include "rouse.php";
-$first_name = $last_name = $email = $password_hash = $phone = $interests = $goals = "";
+$first_name = $last_name = $email = $password_hash = $phone = $interests = $personalgoals = "";
 
 if(isset($_POST['add'])) {
 	$m = new MongoClient("mongodb://main:rouse@ds029456.mlab.com:29456/rouse");
@@ -9,11 +9,17 @@ if(isset($_POST['add'])) {
 	} else {
 		$db = $m->rouse;
         $collection = $db->users;
-        $ret = register($collection, $_POST['firstname'], $_POST['lastname'], $_POST['email'],
-                 hash("sha256", $_POST['password']), $_POST['phonenumber'], $_POST['expl'],
-                 $_POST['personalgoals']);
+		$first_name = $_POST['firstname'];
+		$phone = $_POST['phonenumber'];
+		$personalgoals = $_POST['personalgoals'];
+		$interests = $_POST['expl'];
+        $ret = register($collection, $first_name, $_POST['lastname'], $_POST['email'],
+                 hash("sha256", $_POST['password']), $phone, $interests,
+                 $personalgoals);
         if (strcmp($ret, "Success") === 0) {
-            header("Location: http://localhost:8000/main.php");
+            header("Location: http://localhost:8000/main.php?first_name=" . $first_name .
+			"&phonenumber=" . $phone . "&personalgoals=" . $personalgoals . "&interests=" .
+			$interests);
         } else {
             echo $ret;
         }
