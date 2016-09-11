@@ -63,7 +63,9 @@ if(isset($_POST['add'])) {
 
         <!-- Theme CSS -->
         <link href="startbootstrap-new-age/css/new-age.min.css" rel="stylesheet">
-	</head>
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    </head>
 	<body ng-app="pennapps" ng-controller="MainCtrl">
 		<div class="col-md-6 col-md-offset-3">
 			<div class = "page-header text-center" style="font-size:55px; color:black;">
@@ -137,5 +139,7 @@ if(isset($_POST['add'])) {
 
         <!-- Theme JavaScript -->
         <script src="startbootstrap-new-age/js/new-age.min.js"></script>
-	</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    </body>
 </html>
