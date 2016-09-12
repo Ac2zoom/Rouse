@@ -85,6 +85,7 @@ if(isset($_POST['add'])) {
 								<div class="row">
 									<div class="col-md-5">
 										<br> <br>
+										<label for="firstname" class="margin">First Name:</label>
 										<input type="text" input name="firstname" class="form-control" placeholder="First Name" ng-model="last" id="firstname" />
 										<br>
 										<input type="text" input name="lastname" class="form-control" placeholder="Last Name" ng-model="last" id="lastname" />
