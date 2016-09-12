@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set("America/New_York");
+
 // Add new user to database
 function register($collection, $first_name, $last_name, $email, $password_hash, $phone,
                   $interests, $goals) {
@@ -32,7 +34,7 @@ function login($collection, $email, $password_hash) {
 // Add time to call for next day
 function addTime($collection, $email, $time) {
     $query = array("email" => $email);
-    $update = array("$set" => array("matches." . date("m-d-y") => array('time' => $time)));
+    $update = array('$set' => array("matches." . date("m-d-y") => array('time' => $time)));
     $collection->update($query, $update);
 }
 
@@ -52,7 +54,7 @@ function changeGoal($collection, $email, $new_goal) {
 
 function findMatch($collection, $email, $usertype, $time) {
     // Look for existing matches
-    $query = array("email"=>$email, "matches." . date("m-d-y") . ".match" => array("$exists" => true));
+    $query = array("email"=>$email, "matches." . date("m-d-y") . ".match" => array('$exists' => true));
     $cursor = $collection->find($query);
     if ($cursor->count() > 0) {
         foreach ($cursor as $doc) {

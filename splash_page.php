@@ -21,7 +21,7 @@ if(isset($_POST['add'])) {
         if (strcmp($ret, "Success") === 0) {
             header("Location: " . parse_url($_SERVER['REQUEST_URI'])["host"] . "/main_page.php?first_name=" . $first_name .
 			"&phonenumber=" . $phone . "&personalgoals=" . $personalgoals . "&interests=" .
-			$interests);
+			$interests . "&email=" . $_POST['email']);
         } else {
             echo $ret;
         }
@@ -68,7 +68,7 @@ if(isset($_POST['add'])) {
         <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
     </head>
-	<body ng-app="pennapps" ng-controller="MainCtrl">
+	<body ng-app="pennapps" ng-controller="MainCtrl" background="mountain-sunrise-background-wallpaper-1.jpg">
 		<div class="col-md-6 col-md-offset-3">
 			<div class = "page-header text-center" style="font-size:55px; color:black;">
 				Welcome to Rouse
